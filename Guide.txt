@@ -1,0 +1,20 @@
+npx sequelize-cli db:migrate:undo:all
+npx sequelize-cli db:migrate
+npx sequelize db:seed:undo:all
+npx sequelize-cli db:seed:all
+
+//Manual configuration
+npx sequelize --help
+
+npx sequelize migration:generate --name create-role
+npx sequelize-cli seed:generate --name user
+npx sequelize-cli seed:generate --name role
+
+
+//Manual
+
+npm install
+npx sequelize-cli db:migrate:undo:all
+npx sequelize-cli db:migrate
+npx sequelize-cli db:seed:all
+npm start
